@@ -1,0 +1,37 @@
+name: SSGMinetopiaAddons
+version: 1.0
+main: nl.jerskisnow.ssgminetopiaaddons.Main
+description: SSGMinetopia Addons plugin by jerskisnow
+
+commands:
+  Texurepack:
+    usage: /<command>
+    aliases: [resourcepack]
+    description: TexurePack
+  nightvision:
+    usage: /<command>
+    aliases: [nv]
+    description: Nightvision Command!
+  rename:
+    usage: /<command>
+    description: Rename Command!
+  setlore:
+    usage: /<command>
+    description: Setlore Command!
+  armorkleur:
+    usage: /<command>
+    description: ArmorKleur Command!
+  aangifte:
+    usage: /<command>
+    description: Aangifte Command!
+    
+permissions:
+    ssgminetopia.admin:
+        description: Use this permissions for the admin commands!
+        default: op
+    ssgminetopia.build:
+        description: Use this permissions to break and place blocks!
+        default: op
+    ssgminetopia.nightvision:
+        description: Use this permissions to toggle nightvision mode!
+        default: op
