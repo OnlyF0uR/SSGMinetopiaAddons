@@ -1,2 +1,2 @@
 # SSGMinetopia-Addons
-Just a Minetopia Addons
+Just a couple of Minetopia addons
