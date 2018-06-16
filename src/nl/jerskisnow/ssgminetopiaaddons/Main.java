@@ -5,7 +5,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import nl.jerskisnow.ssgminetopiaaddons.commands.Nightvision;
-import nl.jerskisnow.ssgminetopiaaddons.commands.Texurepack;
+import nl.jerskisnow.ssgminetopiaaddons.commands.Texturepack;
 import nl.jerskisnow.ssgminetopiaaddons.commands.armorkleur;
 import nl.jerskisnow.ssgminetopiaaddons.commands.rename;
 import nl.jerskisnow.ssgminetopiaaddons.commands.setlore;
@@ -25,8 +25,8 @@ public class Main extends JavaPlugin implements Listener {
 		getCommand("rename").setExecutor(renamecommand);
 		CommandExecutor setlorecommand = new setlore(this);
 		getCommand("setlore").setExecutor(setlorecommand);
-		CommandExecutor Texurepackcommand = new Texurepack(this);
-		getCommand("Texurepack").setExecutor(Texurepackcommand);
+		CommandExecutor Texturepackcommand = new Texturepack(this);
+		getCommand("Texturepack").setExecutor(Texurepackcommand);
 		
 		getServer().getPluginManager().registerEvents(new BlockBreak(), this);
 		getServer().getPluginManager().registerEvents(new BlockPlace(), this);
