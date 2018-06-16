@@ -37,5 +37,9 @@ public class Main extends JavaPlugin implements Listener {
 	public void onDisable() {
 		System.out.println("SSGMinetopiaAddons is afgesloten!");
 	}
+	
+	public static String cc(String message) { 
+		return org.bukkit.ChatColor.translateAlternateColorCodes('&', message);
+	}
 
 }
