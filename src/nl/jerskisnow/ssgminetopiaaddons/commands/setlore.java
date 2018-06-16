@@ -23,31 +23,16 @@ public class setlore implements CommandExecutor {
 
 	}
 
-	public String colorize(String msg) {
-		String coloredMsg = "";
-		for (int i = 0; i < msg.length(); i++) {
-			if (msg.charAt(i) == '&')
-				coloredMsg += '§';
-			else
-				coloredMsg += msg.charAt(i);
-		}
-		return coloredMsg;
-	}
-
 	@SuppressWarnings({ "deprecation", "unchecked", "rawtypes", "unused" })
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-		try {
-			sender = main.getServer().getPlayer(sender.getName());
-		} catch (Exception e) {
-			Player p;
-			e.printStackTrace();
+		if(!(sender instanceof Player)) {
 			return true;
 		}
 		if (cmd.getName().equalsIgnoreCase("setlore")) {
 			if(sender.hasPermission("ssgminetopia.admin")) {
 			if (args.length == 0) {
-				sender.sendMessage(colorize("&f[&bSSG&f] &9Gebruik /rename of /setlore"));
+				sender.sendMessage(Main.cc("&f[&bSSG&f] &9Gebruik /rename of /setlore"));
 				return true;
 			}
 
@@ -67,9 +52,9 @@ public class setlore implements CommandExecutor {
 			item.setItemMeta(itemMeta);
 			((HumanEntity) sender).getItemInHand().setItemMeta(itemMeta);
 
-			sender.sendMessage(colorize("&f[&bSSG&f] &9Je hebt de lore van het item veranderd naar: &r" + message));
+			sender.sendMessage(Main.cc("&f[&bSSG&f] &9Je hebt de lore van het item veranderd naar: &r" + message));
 		}else {
-			sender.sendMessage(colorize(main.getConfig().getString("NoPermissions")));
+			sender.sendMessage(Main.cc(main.getConfig().getString("NoPermissions")));
 		}
 		}
 
