@@ -16,20 +16,7 @@ public class armorkleur implements CommandExecutor {
 	Main main;
 
 	public armorkleur(Main plugin) {
-
 		main = plugin;
-
-	}
-
-	public String colorize(String msg) {
-		String coloredMsg = "";
-		for (int i = 0; i < msg.length(); i++) {
-			if (msg.charAt(i) == '&')
-				coloredMsg += '§';
-			else
-				coloredMsg += msg.charAt(i);
-		}
-		return coloredMsg;
 	}
 
 	@SuppressWarnings("deprecation")
@@ -38,8 +25,8 @@ public class armorkleur implements CommandExecutor {
 	      if ((sender instanceof Player)) {
 	    	  if(sender.hasPermission("ssgminetopia.armorkleur")) {
 	    	  if (args.length == 0) {
-		            sender.sendMessage(colorize("&cGebruik /armorkleur <HEX-Code>"));
-		            sender.sendMessage(colorize("&cHier kan je HEX-Codes vinden: https://htmlcolorcodes.com/"));
+		            sender.sendMessage(Main.cc("&cGebruik /armorkleur <HEX-Code>"));
+		            sender.sendMessage(Main.cc("&cHier kan je HEX-Codes vinden: https://htmlcolorcodes.com/"));
 		            return true;
 	    	  }
 	    	  
@@ -55,20 +42,20 @@ public class armorkleur implements CommandExecutor {
 	              LeatherArmorMeta meta = (LeatherArmorMeta)item.getItemMeta();
 	              meta.setColor(Color.fromRGB(number));
 	              item.setItemMeta(meta);
-	              sender.sendMessage(colorize(main.getConfig().getString("KleurSuccesvol").replaceAll("<hexcode>", args[0])));
+	              sender.sendMessage(Main.cc(main.getConfig().getString("KleurSuccesvol").replaceAll("<hexcode>", args[0])));
 	              return true;
 	            }
-	            sender.sendMessage(colorize(main.getConfig().getString("GeenArmorInHand")));
+	            sender.sendMessage(Main.cc(main.getConfig().getString("GeenArmorInHand")));
 	            return true;
 	          }
-	          sender.sendMessage(colorize(main.getConfig().getString("FouteArgumenten")));
+	          sender.sendMessage(Main.cc(main.getConfig().getString("FouteArgumenten")));
 	            return true;
 	        }
-	        sender.sendMessage(colorize(main.getConfig().getString("FouteArgumenten")));
+	        sender.sendMessage(Main.cc(main.getConfig().getString("FouteArgumenten")));
             return true;
 	      }
 	      } else {
-	    	  sender.sendMessage(colorize(main.getConfig().getString("NoPermissions")));
+	    	  sender.sendMessage(Main.cc(main.getConfig().getString("NoPermissions")));
 	      }
 	    
 	    return false;
@@ -76,13 +63,10 @@ public class armorkleur implements CommandExecutor {
 	
 	
 	  
-	  private static int tryParse(String toParse)
-	  {
-	    try
-	    {
+	  private static int tryParse(String toParse) {
+	    try {
 	      return Integer.parseInt(toParse, 16);
-	    }
-	    catch (NumberFormatException e) {}
+	    } catch (NumberFormatException e) {}
 	    return 65036;
 	  }
 
