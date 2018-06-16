@@ -20,36 +20,18 @@ public class rename implements CommandExecutor{
 		main = plugin;
 
 	}
-
-	public String colorize(String msg) {
-		String coloredMsg = "";
-		for (int i = 0; i < msg.length(); i++) {
-			if (msg.charAt(i) == '&')
-				coloredMsg += '§';
-			else
-				coloredMsg += msg.charAt(i);
-		}
-		return coloredMsg;
-	}
 	
-		
 
 	@SuppressWarnings({ "deprecation", "unused" })
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-		try {
-			sender = main.getServer().getPlayer(sender.getName());
-		} catch (Exception e) {
-			Player p;
-			e.printStackTrace();
-			return true;
+		if (!(sender instanceof Player)) {
+			return true;	
 		}
-
-		Player p;
 		if (cmd.getName().equalsIgnoreCase("rename")) {
 			if(sender.hasPermission("ssgminetopia.admin")) {
 			if (args.length == 0) {
-				sender.sendMessage(colorize("&f[&bSSG&f] &9Gebruik /rename of /setlore"));
+				sender.sendMessage(Main.cc("&f[&bSSG&f] &9Gebruik /rename of /setlore"));
 				return true;
 			}
 			ItemStack item = ((HumanEntity) sender).getItemInHand();
@@ -62,9 +44,9 @@ public class rename implements CommandExecutor{
 
 			itemMeta.setDisplayName(message);
 			((HumanEntity) sender).getItemInHand().setItemMeta(itemMeta);
-			sender.sendMessage(colorize("&f[&bSSG&f] &9Je hebt de naam van het item veranderd naar: &r" + message));
+			sender.sendMessage(Main.cc("&f[&bSSG&f] &9Je hebt de naam van het item veranderd naar: &r" + message));
 		}else {
-			sender.sendMessage(colorize(main.getConfig().getString("NoPermissions")));
+			sender.sendMessage(Main.cc(main.getConfig().getString("NoPermissions")));
 		}
 		}
 		return true;

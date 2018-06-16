@@ -4,10 +4,10 @@ main: nl.jerskisnow.ssgminetopiaaddons.Main
 description: SSGMinetopia Addons plugin by jerskisnow
 
 commands:
-  Texurepack:
+  texturepack:
     usage: /<command>
     aliases: [resourcepack]
-    description: TexurePack
+    description: texturepack
   nightvision:
     usage: /<command>
     aliases: [nv]

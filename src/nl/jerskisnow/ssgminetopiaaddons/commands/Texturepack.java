@@ -7,32 +7,19 @@ import org.bukkit.entity.Player;
 
 import nl.jerskisnow.ssgminetopiaaddons.Main;
 
-public class Texurepack implements CommandExecutor {
+public class Texturepack implements CommandExecutor {
 
 	Main main;
 
 	public Texurepack(Main plugin) {
-
 		main = plugin;
-
-	}
-
-	public String colorize(String msg) {
-		String coloredMsg = "";
-		for (int i = 0; i < msg.length(); i++) {
-			if (msg.charAt(i) == '&')
-				coloredMsg += '§';
-			else
-				coloredMsg += msg.charAt(i);
-		}
-		return coloredMsg;
 	}
 
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		Player p = (Player) sender;
 
-		if (cmd.getName().equalsIgnoreCase("Texurepack")) {
-			p.sendMessage(colorize(main.getConfig().getString("texurepack")));
+		if (cmd.getName().equalsIgnoreCase("texturepack")) {
+			p.sendMessage(Main.cc(main.getConfig().getString("texturepack")));
 		}
 		return true;
 	}

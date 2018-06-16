@@ -3,7 +3,7 @@
 # Dit komt in de chat te staan als een speler geen toegang heeft tot een command!
 NoPermissions: 'Jij hebt hier geen toegang voor!'
 
-texurepack: '&3Hier kan je jouw texurepack link plakken!'
+texturepack: '&3Hier kan je jouw texurepack link plakken!'
 
 # ---=[Nightvision]=---
 NightVisionOff: '&9Nightvision mode is uitgeschakeld!'
