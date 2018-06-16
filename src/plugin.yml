@@ -2,6 +2,7 @@ name: SSGMinetopiaAddons
 version: 1.0
 main: nl.jerskisnow.ssgminetopiaaddons.Main
 description: SSGMinetopiaAddons by jerskisnow
+author: jerskisnow
 
 commands:
   texturepack:
@@ -38,5 +39,5 @@ permissions:
     ssgminetopia.nightvision:
         description: Use this permissions to toggle nightvision mode!
     ssgminetopia.huiszoekingsbevel:
-        description: Use this permissions to toggle nightvision mode!
+        description: Create a book for a house-search order
 default: op
