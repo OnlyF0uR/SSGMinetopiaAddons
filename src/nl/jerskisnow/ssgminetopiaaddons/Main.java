@@ -1,45 +1,27 @@
 package nl.jerskisnow.ssgminetopiaaddons;
 
-import org.bukkit.command.CommandExecutor;
-import org.bukkit.event.Listener;
+import nl.jerskisnow.ssgminetopiaaddons.commands.*;
+import nl.jerskisnow.ssgminetopiaaddons.listeners.BlockBreak;
+import nl.jerskisnow.ssgminetopiaaddons.listeners.BlockPlace;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import nl.jerskisnow.ssgminetopiaaddons.commands.Nightvision;
-import nl.jerskisnow.ssgminetopiaaddons.commands.Texturepack;
-import nl.jerskisnow.ssgminetopiaaddons.commands.armorkleur;
-import nl.jerskisnow.ssgminetopiaaddons.commands.rename;
-import nl.jerskisnow.ssgminetopiaaddons.commands.setlore;
-import nl.jerskisnow.ssgminetopiaaddons.listener.BlockBreak;
-import nl.jerskisnow.ssgminetopiaaddons.listener.BlockPlace;
+public class Main extends JavaPlugin {
 
-public class Main extends JavaPlugin implements Listener {
-	
-	public void onEnable() {
-		System.out.println("SSGMinetopiaAddons is opgestart!");
-		
-		CommandExecutor armorkleurcommand = new armorkleur(this);
-		getCommand("armorkleur").setExecutor(armorkleurcommand);
-		CommandExecutor Nightvisioncommand = new Nightvision(this);
-		getCommand("Nightvision").setExecutor(Nightvisioncommand);
-		CommandExecutor renamecommand = new rename(this);
-		getCommand("rename").setExecutor(renamecommand);
-		CommandExecutor setlorecommand = new setlore(this);
-		getCommand("setlore").setExecutor(setlorecommand);
-		CommandExecutor Texturepackcommand = new Texturepack(this);
-		getCommand("Texturepack").setExecutor(Texurepackcommand);
-		
-		getServer().getPluginManager().registerEvents(new BlockBreak(), this);
-		getServer().getPluginManager().registerEvents(new BlockPlace(), this);
-		
-		saveDefaultConfig();
-	}
-	
-	public void onDisable() {
-		System.out.println("SSGMinetopiaAddons is afgesloten!");
-	}
-	
-	public static String cc(String message) { 
-		return org.bukkit.ChatColor.translateAlternateColorCodes('&', message);
-	}
+    public void onEnable() {
+        saveDefaultConfig();
 
+        getCommand("aangifte").setExecutor(new Aangifte(this));
+        getCommand("armorkleur").setExecutor(new ArmorKleur(this));
+        getCommand("huiszoekingsbevel").setExecutor(new Huiszoekingsbevel(this));
+        getCommand("nightvision").setExecutor(new Nightvision(this));
+        getCommand("rename").setExecutor(new Rename(this));
+        getCommand("setlore").setExecutor(new Setlore(this));
+        getCommand("texturepack").setExecutor(new Texturepack(this));
+        getServer().getPluginManager().registerEvents(new BlockBreak(), this);
+        getServer().getPluginManager().registerEvents(new BlockPlace(), this);
+    }
+
+    public void onDisable() {
+
+    }
 }

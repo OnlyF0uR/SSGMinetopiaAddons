@@ -1,15 +1,17 @@
-# SSGMinetopia Addons plugin by jerskisnow
+# SSGMinetopiaAddons by jerskisnow
 
 # Dit komt in de chat te staan als een speler geen toegang heeft tot een command!
 NoPermissions: 'Jij hebt hier geen toegang voor!'
 
-texturepack: '&3Hier kan je jouw texurepack link plakken!'
+Texturepack: '&3Hier kan je jouw texurepack link plakken!'
 
 # ---=[Nightvision]=---
 NightVisionOff: '&9Nightvision mode is uitgeschakeld!'
 NightVisionOn: '&9Nightvision mode is ingeschakeld!'
 
 # ---=[Antibreak/Antiplace]=---
+NoBreak_Enabled: true
+NoPlace_Enabled: true
 NoBreakMessage: '&cYou are not permitted to break that block!'
 NoPlaceMessage: '&cYou are not permitted to place that block!'
 

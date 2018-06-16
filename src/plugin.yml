@@ -1,13 +1,13 @@
 name: SSGMinetopiaAddons
 version: 1.0
 main: nl.jerskisnow.ssgminetopiaaddons.Main
-description: SSGMinetopia Addons plugin by jerskisnow
+description: SSGMinetopiaAddons by jerskisnow
 
 commands:
   texturepack:
     usage: /<command>
     aliases: [resourcepack]
-    description: texturepack
+    description: Texturepack Command!
   nightvision:
     usage: /<command>
     aliases: [nv]
@@ -24,7 +24,10 @@ commands:
   aangifte:
     usage: /<command>
     description: Aangifte Command!
-    
+  huiszoekingsbevel:
+    usage: /<command>
+    description: Huiszoekingsbevel Command!
+
 permissions:
     ssgminetopia.admin:
         description: Use this permissions for the admin commands!
@@ -34,4 +37,6 @@ permissions:
         default: op
     ssgminetopia.nightvision:
         description: Use this permissions to toggle nightvision mode!
-        default: op
+    ssgminetopia.huiszoekingsbevel:
+        description: Use this permissions to toggle nightvision mode!
+default: op
