@@ -34,7 +34,7 @@ public class setlore implements CommandExecutor {
 			if (args.length == 0) {
 				sender.sendMessage(Main.cc("&f[&bSSG&f] &9Gebruik /rename of /setlore"));
 				return true;
-			}
+			} 
 
 			ItemStack item = ((HumanEntity) sender).getItemInHand();
 			ItemMeta itemMeta = item.getItemMeta();
