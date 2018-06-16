@@ -15,22 +15,11 @@ public class Texturepack implements CommandExecutor {
 		main = plugin;
 	}
 
-	public String colorize(String msg) {
-		String coloredMsg = "";
-		for (int i = 0; i < msg.length(); i++) {
-			if (msg.charAt(i) == '&')
-				coloredMsg += '§';
-			else
-				coloredMsg += msg.charAt(i);
-		}
-		return coloredMsg;
-	}
-
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		Player p = (Player) sender;
 
 		if (cmd.getName().equalsIgnoreCase("texturepack")) {
-			p.sendMessage(colorize(main.getConfig().getString("texturepack")));
+			p.sendMessage(Main.cc(main.getConfig().getString("texturepack")));
 		}
 		return true;
 	}
