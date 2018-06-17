@@ -1,7 +1,8 @@
 # SSGMinetopiaAddons by jerskisnow
+# Version 1.2
 
 # Dit komt in de chat te staan als een speler geen toegang heeft tot een command!
-NoPermissions: 'Jij hebt hier geen toegang voor!'
+NoPermissions: '&cJij hebt hier geen toegang voor!'
 
 Texturepack: '&3Hier kan je jouw texurepack link plakken!'
 

@@ -19,7 +19,7 @@ public class Nightvision implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-      if ((sender instanceof Player)) {
+        if ((sender instanceof Player)) {
             Player p = (Player) sender;
             if (p.hasPermission("ssgminetopia.nightvision")) {
                 if (p.hasPotionEffect(PotionEffectType.NIGHT_VISION)) {
@@ -34,6 +34,8 @@ public class Nightvision implements CommandExecutor {
             }
 
             p.sendMessage(ChatColor.translateAlternateColorCodes('&', main.getConfig().getString("NoPermissions")));
+        }else{
+            return false;
         }
 
         return true;
