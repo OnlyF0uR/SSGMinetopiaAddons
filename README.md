@@ -1,3 +1,3 @@
 # SSGMinetopiaAddons
 
-MinetopiaAddons plugin! (This plugin is Dutch)
+MinetopiaAddons plugin by jerskisnow! (This plugin is Dutch)
