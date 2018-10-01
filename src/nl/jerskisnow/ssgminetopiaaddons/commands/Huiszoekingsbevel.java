@@ -55,6 +55,8 @@ public class Huiszoekingsbevel implements CommandExecutor {
             } else {
                 p.sendMessage(ChatColor.BLUE + "Gebruik: " + ChatColor.DARK_AQUA + "/huiszoekingsbevel <Plotnummer> <Reden>");
             }
+        }else{
+             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', main.getConfig().getString("NoPermissions")));
         }
         return true;
 
