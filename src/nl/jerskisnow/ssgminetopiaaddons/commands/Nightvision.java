@@ -32,10 +32,9 @@ public class Nightvision implements CommandExecutor {
                 p.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 100000, 2));
                 return true;
             }
-
-            p.sendMessage(ChatColor.translateAlternateColorCodes('&', main.getConfig().getString("NoPermissions")));
         }else{
-            return false;
+            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', main.getConfig().getString("NoPermissions")));
+            return true;
         }
 
         return true;
