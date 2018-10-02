@@ -18,8 +18,7 @@ public class Huiszoekingsbevel implements CommandExecutor {
     Main main;
 
     public Huiszoekingsbevel(Main plugin) {
-
-        main = plugin;
+    	main = plugin;
     }
 
     @Override

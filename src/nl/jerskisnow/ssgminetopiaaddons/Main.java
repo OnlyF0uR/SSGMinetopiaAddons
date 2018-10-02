@@ -15,12 +15,12 @@ public class Main extends JavaPlugin {
             System.out.println("ERROR: Deze plugin support geen 1.13 of hoger!");
             System.out.println("---=[SSGMinetopiaAddons]=--");
             getServer().getPluginManager().disablePlugin(this);
-        }else {
+        } else {
         	System.out.println("SSGMinetopiaAddons is opgestart, bedankt voor het gebruiken!");
+        	
+            loadCommands();
+            loadEvents();
         }
-        
-        loadCommands();
-        loadEvents();
         
         saveDefaultConfig();
     }

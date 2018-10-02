@@ -15,10 +15,10 @@ public class BlockBreak implements Listener {
     public void onBlockBreak(BlockBreakEvent event) {
         Player p = event.getPlayer();
         if (main.getConfig().getBoolean("NoBreak_Enabled") == true) {
-        if ((!p.hasPermission("ssgminetopia.build")) && !p.isOp()) {
-            p.sendMessage(ChatColor.translateAlternateColorCodes('&', main.getConfig().getString("NoBreakMessage")));
-            event.setCancelled(true);
-        }
+          if ((!p.hasPermission("ssgminetopia.build")) && !p.isOp()) {
+              p.sendMessage(ChatColor.translateAlternateColorCodes('&', main.getConfig().getString("NoBreakMessage")));
+              event.setCancelled(true);
+          }
         }
     }
 }

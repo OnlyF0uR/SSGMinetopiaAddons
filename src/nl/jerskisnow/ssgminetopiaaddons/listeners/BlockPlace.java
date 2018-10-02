@@ -15,10 +15,10 @@ public class BlockPlace implements Listener {
     public void onBlockPlace(BlockPlaceEvent e) {
         Player p = e.getPlayer();
         if (main.getConfig().getBoolean("NoPlace_Enabled") == true) {
-        if ((!p.hasPermission("ssgminetopia.build")) && !p.isOp()) {
-            p.sendMessage(ChatColor.translateAlternateColorCodes('&', main.getConfig().getString("NoPlaceMessage")));
-            e.setCancelled(true);
-        }
+          if ((!p.hasPermission("ssgminetopia.build")) && !p.isOp()) {
+              p.sendMessage(ChatColor.translateAlternateColorCodes('&', main.getConfig().getString("NoPlaceMessage")));
+              e.setCancelled(true);
+          }
         }
 
     }
