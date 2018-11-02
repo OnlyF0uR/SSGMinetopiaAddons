@@ -1,6 +1,7 @@
 package nl.jerskisnow.ssgminetopiaaddons.commands;
 
 import nl.jerskisnow.ssgminetopiaaddons.Main;
+
 import org.bukkit.ChatColor;
 import org.bukkit.Color;
 import org.bukkit.Material;

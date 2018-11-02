@@ -1,5 +1,5 @@
 # SSGMinetopiaAddons by jerskisnow
-# Version 1.2
+# Version 2.0.0
 
 # Dit komt in de chat te staan als een speler geen toegang heeft tot een command!
 NoPermissions: '&cJij hebt hier geen toegang voor!'
@@ -13,8 +13,8 @@ NightVisionOn: '&9Nightvision mode is ingeschakeld!'
 # ---=[Antibreak/Antiplace]=---
 NoBreak_Enabled: true
 NoPlace_Enabled: true
-NoBreakMessage: '&cYou are not permitted to break that block!'
-NoPlaceMessage: '&cYou are not permitted to place that block!'
+NoBreakMessage: '&cJe hebt geen toegang om blokken te breken!'
+NoPlaceMessage: '&cJe hebt geen toegang om blokken te plaatsen!'
 
 # ---=[Armorkleur veranderen]=---
 KleurSuccesvol: '&cJe hebt het item de kleur #<hexcode> gegeven!'

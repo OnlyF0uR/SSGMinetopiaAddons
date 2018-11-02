@@ -1,5 +1,5 @@
 name: SSGMinetopiaAddons
-version: 1.2
+version: 2.0.0
 main: nl.jerskisnow.ssgminetopiaaddons.Main
 description: SSGMinetopiaAddons by jerskisnow
 
@@ -27,6 +27,9 @@ commands:
   huiszoekingsbevel:
     usage: /<command>
     description: Huiszoekingsbevel Command!
+  leningsbewijs:
+    usage: /<command>
+    description: Leningsbewijs Command!
 
 permissions:
     ssgminetopia.admin:
@@ -39,5 +42,8 @@ permissions:
         description: Dit is de permission om nightvision aan en uit te zetten!
         default: op
     ssgminetopia.politie:
+        description: Dit is de permission voor de politie commands!
+        default: op
+    ssgminetopia.bank:
         description: Dit is de permission voor de politie commands!
         default: op

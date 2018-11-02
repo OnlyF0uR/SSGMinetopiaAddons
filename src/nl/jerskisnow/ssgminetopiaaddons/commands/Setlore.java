@@ -17,7 +17,7 @@ public class Setlore implements CommandExecutor {
     Main main;
     public Setlore(Main plugin) { main = plugin; }
 
-    @SuppressWarnings({ "deprecation", "unchecked", "rawtypes", "unused" })
+    @SuppressWarnings({ "deprecation", "unchecked", "rawtypes" })
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if(!(sender instanceof Player)) {

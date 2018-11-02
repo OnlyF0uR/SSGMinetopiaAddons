@@ -44,6 +44,7 @@ public class Main extends JavaPlugin {
         getCommand("rename").setExecutor(new Rename(this));
         getCommand("setlore").setExecutor(new Setlore(this));
         getCommand("texturepack").setExecutor(new Texturepack(this));
+        getCommand("leningsbewijs").setExecutor(new Leningsbewijs(this));
     }
     
     private void loadEvents() {

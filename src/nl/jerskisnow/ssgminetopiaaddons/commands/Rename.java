@@ -15,7 +15,7 @@ public class Rename implements CommandExecutor {
     Main main;
     public Rename(Main plugin) { main = plugin; }
 
-    @SuppressWarnings({ "deprecation", "unused" })
+    @SuppressWarnings({ "deprecation" })
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (!(sender instanceof Player)) {

@@ -14,7 +14,7 @@ public class BlockBreak implements Listener {
     @EventHandler
     public void onBlockBreak(BlockBreakEvent event) {
         Player p = event.getPlayer();
-        if (main.getConfig().getBoolean("NoBreak_Enabled") == true) {
+        if (main.getConfig().getBoolean("NoBreak_Enabled")) {
           if ((!p.hasPermission("ssgminetopia.build")) && !p.isOp()) {
               p.sendMessage(ChatColor.translateAlternateColorCodes('&', main.getConfig().getString("NoBreakMessage")));
               event.setCancelled(true);
