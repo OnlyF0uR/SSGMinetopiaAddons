@@ -14,3 +14,4 @@ Download nu op [Spigot](https://www.spigotmc.org/resources/ssgminetopiaaddons.53
 7. AntiBlockPlace --> Spelers kunnen geen blocken plaatsen tenzijn ze de permissions ssgminetopia.build hebben of OP zijn! (Togglebaar in config!)
 8. /aangifte --> Ontvang een automatisch ingevuld aangifte boekje!
 9. /huiszoekingsbevel--> Ontvang een automatisch ingevuld huiszoekingsbevel boekje! (``ssgminetopia.politie``)
+10. /leningsbewijs --> Ontvang een automatisch ingevuld leningsbewijs boekje! (``ssgminetopia.bank``)
