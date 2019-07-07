@@ -33,7 +33,7 @@ public class Leningsbewijs implements CommandExecutor {
 					agr = agr + args[i] + " ";
 				}
 
-				bj.lening(p, args[0], args[1], args[2], agr);;
+				bj.lening(p, args[0], args[1], args[2], agr);
 
 				p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&3Je hebt succesvol een huiszoekingsbevel aangemaakt voor &b" + args[0] + "&3!"));
 			} else {
